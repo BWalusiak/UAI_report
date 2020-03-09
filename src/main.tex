@@ -9,6 +9,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \selectlanguage{polish}
+\usepackage{lmodern}
 \usepackage{amsfonts}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -23,6 +24,35 @@
     \maketitle
 
     \tableofcontents
+    \newpage
+
+
+    \section{Cel Ćwiczenia}\label{sec:cel-ćwiczenia}
+
+    Celem ćwiczenia laboratoryjnego było użycie narzędzia PragmaDev oraz języka SDL do zbudowania prostego systemu
+    odpowiadającego na żądania użytkownika.
+
+
+    \section{Przebieg zadania}\label{sec:przebieg-zadania}
+
+    \subsection{Podstawy Obsługi Narzędzia PragmaDev}\label{subsec:podstawy-obsługi-narzędzia-pragnadev}
+
+    Na początku laboratorium nauczyliśmy się obsługiwać GUI PragmaDev, poznaliśmy elementy takie jak: tworzenie nowego
+    projektu, dodawanie/usuwanie/modyfikowanie elementów systemu, obsługa poszczególnych okienek odpowiadających za
+    funkcjonowanie i symulację działania systemu.
+
+    \subsection{Budowa Systemu}\label{subsec:budowa-systemu}
+
+    Wykorzystując nowo poznane narzędzie zaprojektowaliśmy system który:
+    \begin{itemize}
+        \item Oczekuje na żądanie użytkownika
+        \item Odpowiada ok albo reject losowo z szansą $\frac{1}{10}$ na niepowodzenie, symulując tym samym nieprzewidziane problemy.
+        \item W zależności od dalszego działania użytkownika wykonuje żądanie lub odmawia usługi z uwagi na niedostępne zasoby, na potrzeby symulacji określane losowo.
+        \item Posiada możliwość przerwania usługi w dowolnym momencie jej wykonywania.
+        \item odpowiada błędem na nowe żądania gdy system jest zajęty - symulacja zajętości za pomocą timer'a.
+    \end{itemize}
+
+    Dbając o komfort wizualny użytkownika nadaliśmy projektowi stylistykę drzwi. %TODO ref + img
 
 
 
