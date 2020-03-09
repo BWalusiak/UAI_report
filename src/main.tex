@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[margin=1in]{geometry}
 
 % Document
 \begin{document}
@@ -25,7 +26,6 @@
 
     \tableofcontents
     \newpage
-
 
     \section{Cel Ćwiczenia}\label{sec:cel-ćwiczenia}
 
@@ -43,17 +43,43 @@
 
     \subsection{Budowa Systemu}\label{subsec:budowa-systemu}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{images/system.png}
+        \caption{muj\_system}
+    \end{figure}
+
+    \newpage
+
     Wykorzystując nowo poznane narzędzie zaprojektowaliśmy system który:
     \begin{itemize}
         \item Oczekuje na żądanie użytkownika
-        \item Odpowiada ok albo reject losowo z szansą $\frac{1}{10}$ na niepowodzenie, symulując tym samym nieprzewidziane problemy.
+        \item Odpowiada \texttt{ok} albo \texttt{reject} losowo z szansą $\frac{1}{10}$ na niepowodzenie, symulując tym samym nieprzewidziane problemy.
         \item W zależności od dalszego działania użytkownika wykonuje żądanie lub odmawia usługi z uwagi na niedostępne zasoby, na potrzeby symulacji określane losowo.
         \item Posiada możliwość przerwania usługi w dowolnym momencie jej wykonywania.
         \item odpowiada błędem na nowe żądania gdy system jest zajęty - symulacja zajętości za pomocą timer'a.
     \end{itemize}
 
-    Dbając o komfort wizualny użytkownika nadaliśmy projektowi stylistykę drzwi. %TODO ref + img
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{images/process1.png}
+        \caption{muj\_odzwierny}
+    \end{figure}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textwidth]{images/process2.png}
+        \caption{muj\_bekend}
+    \end{figure}
+
+
+    Dbając o komfort wizualny użytkownika nadaliśmy projektowi stylistykę drzwi.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/doors.png}
+        \caption{Interfejs graficzny użytkownika końcowego}
+    \end{figure}
 
 
 \end{document}
